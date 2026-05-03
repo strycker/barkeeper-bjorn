@@ -1,6 +1,6 @@
 # Bar Owner Profile
 
-> *Your drinker profile. The agent reads this on every session and updates it through onboarding and periodic re-evaluation. Edit anything by hand if it doesn't ring true — your bartender will respect your corrections.*
+> *Glenn's drinker profile. The agent reads this on every session and updates it through periodic re-evaluation. Edit anything by hand if it doesn't ring true.*
 
 ---
 
@@ -8,98 +8,59 @@
 
 | Field | Value |
 |---|---|
-| **Full name** (used for cocktail attribution) | *(fill during onboarding)* |
-| **Preferred name** (what the agent calls you) | *(fill during onboarding)* |
-| **Location** (for time zone and seasonal references) | *(fill during onboarding)* |
-| **Time zone abbreviation** | *(fill during onboarding — e.g., CST/CDT, PST/PDT, ET, GMT)* |
+| **Full name** (used for cocktail attribution) | Glenn Strycker |
+| **Preferred name** (what the agent calls you) | Glenn |
+| **Location** | Chicago, IL, USA |
+| **Time zone abbreviation** | CST/CDT (Central Time) |
 
 ---
 
 ## Background and Context
 
-*Free-form notes about who you are. The agent uses this to calibrate vocabulary and conversational depth.*
-
-- **Profession / academic background:** *(fill during onboarding)*
-- **Vocabulary preference:** *(domains where technical language is welcome — e.g., physics, finance, medicine, engineering)*
-- **Drinking frequency:** *(occasional / weekly / regular / etc.)*
-- **Typical drinking context:** *(solo evenings / dinner parties / entertaining / weekend social / etc.)*
-- **Household context:** *(partner's background, dietary considerations, kids in the house, anything that affects ingredient access)*
-- **Other notes:** *(anything else worth knowing)*
+- **Profession / academic background:** Physics PhD. Currently Vice President of Decision Sciences, leading an 8–9 person team of PhDs specializing in predictive modeling (supervised and unsupervised learning). Strong applied background in financial modeling for investment predictions.
+- **Vocabulary preference:** Free use of physics, data science, predictive modeling, and financial/investment terminology is welcome and encouraged.
+- **Drinking frequency:** Regular home cocktail-maker; treats mixology as a craft and an ongoing creative project.
+- **Typical drinking context:** Solo evenings (contemplative, often spirit-forward), entertaining friends and family, occasional themed drinks for specific guests (e.g., habanero-loving Dave).
+- **Household context:** Wife is Taiwanese — household has access to many Asian ingredients (yuzu, shiso, sake, mirin, matcha, Asian pear, dried plums, oolong, jasmine tea, black sesame potentially available; specifics still TBD). When designing drinks, consider whether these ingredients would unlock distinctive builds and ask if relevant.
+- **Other notes:** Maintains an organized, well-stocked bar with particular depth in whisk(e)y (5 regional styles), bitters (10 SKUs), and an interesting fortified wine and liqueur collection. Keeps an active shopping list and is interested in highest-impact-per-dollar additions. Has a documented set of original cocktails ([cocktail1]–[cocktail6]) reflecting a clear creative voice.
 
 ---
 
 ## Flavor Profile — The 6 Axes
 
-The agent calibrates suggestions against these six axes. Confidence reflects how well-established each position is — early in the relationship, most will be Tentative. After enough cocktails together, most should be High.
-
 | # | Axis | Position | Confidence | Last Evaluated |
 |---|---|---|---|---|
-| 1 | Sweetness register (dry ⟷ rounded/dessert) | *(unset)* | — | — |
-| 2 | Acid preference (sharp citrus ⟷ soft/barely-there) | *(unset)* | — | — |
-| 3 | Strength (spirit-forward ⟷ refreshment-forward) | *(unset)* | — | — |
-| 4 | Aromatic complexity (clean and direct ⟷ layered and brooding) | *(unset)* | — | — |
-| 5 | Temperature/season preference (year-round bright ⟷ seasonal shifts) | *(unset)* | — | — |
-| 6 | Risk tolerance (classics-only ⟷ surprise me) | *(unset)* | — | — |
-
-> **How to read positions:** Use language like "Strong A," "Lean A," "Middle," "Lean B," "Strong B," or describe nuance ("Lean A, but enjoys spirit-forward when the weather turns cold").
+| 1 | Sweetness register (dry ⟷ rounded/dessert) | **Lean A — bone-dry leaning.** Spirit-forward palate. Rejects overly sweet builds; dessert-adjacent only when the framing earns it (e.g., milk punches, after-dinner sippers). | High | 2026-05-03 |
+| 2 | Acid preference (sharp citrus ⟷ soft/barely-there) | **Middle, with situational lean.** Comfortable in both lanes — strongly enjoys stirred no-citrus drinks (Hallucination, Manhattan-family) AND citrus-forward shaken drinks (Crossover, Margarita-family). Picks based on occasion. | High | 2026-05-03 |
+| 3 | Strength (spirit-forward ⟷ refreshment-forward) | **Strong A — spirit-forward.** Self-described preference for "spirit-forward classic cocktail traditions." Most originals are 1.5+ oz of base spirit with small-pour modifiers. | High | 2026-05-03 |
+| 4 | Aromatic complexity (clean and direct ⟷ layered and brooding) | **Strong B — layered and brooding.** Loves bitters stacking, split modifiers, and structural complexity. Owns 10 bitters SKUs and uses them deliberately. Originals consistently feature 2–3 bitters working in conversation. | High | 2026-05-03 |
+| 5 | Temperature/season (year-round bright ⟷ seasonal shifts) | **Lean B — adapts with season.** Has explicitly built warm-weather originals (Wild Sanibel) and contemplative cool-weather originals (The Hallucination). Active about seasonal context. | High | 2026-05-03 |
+| 6 | Risk tolerance (classics-only ⟷ surprise me) | **Strong B — surprise me.** Has six originals on file, actively iterates on them, asks for "new and different than just a margarita with a mezcal substitute." Wants creative pushback, not safe defaults. | High | 2026-05-03 |
 
 ---
 
 ## Drinker Archetypes
 
-> *The agent assigns 2–4 playful descriptors that capture your drinking style. These are meant in good fun and may include flattering, neutral, and cheeky labels. They evolve over time as the agent learns more. If any feel wrong, tell the agent and it will revise.*
-
 ### Current archetypes
-*(unset until first onboarding complete)*
+- **Sophisticated** — well-developed palate; rules out specific ingredients (Chartreuse, egg) based on taste rather than unfamiliarity
+- **Curious / Studious** — wants to know *why* a drink works, engages with structural rationale, asks for "ingredient logic" not just recipes
+- **Bartender's bartender** — designs originals, maintains a documented archive, treats this as an ongoing creative discipline
+- **Spirit-forward / Old-school** — Manhattan-and-Old-Fashioned territory at the core, with modern willingness to experiment around the edges
 
-### Available archetypes (the agent picks from these and may invent new ones)
-
-**Aspirational / refined**
-- Sophisticated — well-developed palate, knows what they want
-- Serious — treats cocktails as a craft, not an indulgence
-- Well-traveled — knows what a real Negroni in Milan tastes like
-- Curious — wants to know *why* a drink works, not just that it does
-- Studious — reads cocktail books for fun
-- Classicist — pre-Prohibition purist, suspicious of anything invented after 1930
-- Modernist — Death & Co. era and forward
-- Bartender's bartender — drinks like a fellow professional
-
-**Style-specific**
-- Spirit-forward / Old-school — Manhattan, Old Fashioned, Sazerac territory
-- Tiki enthusiast / Beachgoer — rum, tropical, the long history of escapism
-- Mezcal evangelist / Smoke chaser — agave is religion
-- Aperitif aficionado — bittersweet, low-ABV, before-dinner ritual
-- Bourbon dad / Whisky librarian — collects bottles, pours small, savors
-- Hedonist / Indulgent — go big or go home
-- Minimalist / Functional — wants 5 great drinks, not 50 mediocre ones
-
-**Cheeky (in good fun, applied sparingly and only when fitting)**
-- Frou-frou / Fancy-pants — every drink needs a garnish flag
-- Sweet-tooth — orders piña coladas without irony
-- Frat-boy / Beer-and-shot — direct, unsubtle, knows what they like
-- Theatrical / Showy — drinks should impress, ideally on fire
-- Reserved / Quiet sipper — same drink every time, no fuss
-- Beverage tourist — orders whatever the bartender suggests
-- Substack mixologist — has Strong Opinions about ice
-- Reluctant guest — ordered a vodka soda and would prefer to be elsewhere
-
-> **Guardrail:** Descriptors should fit observable patterns. The agent should never apply a descriptor to insult; if it picks a cheeky one, it should be willing to laugh at itself in the same breath. Push back on any that don't fit — they'll be removed.
+> *Notes:* Glenn has the discipline of a classicist with the curiosity of a modernist. Not frou-frou, not theatrical, not minimalist. Treats cocktail-making the way he probably treats predictive modeling — structural, evidence-based, iterative, and willing to reject results that don't hold up.
 
 ---
 
 ## Vetoes
 
-These should also appear in `inventory.md` (which is the canonical source for cocktail-suggestion logic). This section is a quick-reference summary.
+These should match `inventory.md`. This section is a quick-reference summary.
 
 ### Permanently disliked ingredients
-*(Never suggest. Examples: Chartreuse, egg, anise, etc.)*
-
-- *(unset)*
+- **Chartreuse** (yellow or green) — not Glenn's style. Excludes Last Word, Bijou, Naked & Famous, Final Ward, etc. Do not suggest as a purchase.
+- **Egg** — no egg-based cocktails. Excludes flips, egg-white sours (Pisco Sour, Clover Club, Boston Sour, Whiskey Sour with foam, Ramos Gin Fizz, etc.), and any whole-egg or egg-white build. Eggs may be in the kitchen for cooking but are not used in drinks.
 
 ### Substitute for now
-*(Don't have, will buy eventually. Use a documented sub until purchased.)*
-
-- *(unset)*
+- **Tequila** → substitute **mezcal 1:1**. Glenn enjoys tequila and plans to add it eventually. For citrus-forward shaken drinks (Margarita, Sidecar variants), the mezcal sub is excellent. For refresher-style cocktails (Paloma, Tommy's Margarita), the mezcal sub changes character meaningfully — flag the trade-off when relevant.
 
 ---
 
@@ -109,7 +70,12 @@ Quick reference. Full recipes live in `recipes.md`.
 
 | ID | Name | Creator | Style |
 |---|---|---|---|
-| *(unset)* | | | |
+| cocktail1 | The Hallucination | Barkeeper Bjorn (AI) | Stirred rye, brooding/contemplative |
+| cocktail2 | CardaMama | Glenn Strycker | Shaken brandy with effervescence |
+| cocktail3 | Wild Sanibel | Glenn Strycker | Built/floated summer refresher |
+| cocktail4 | Plum Awesome | Glenn Strycker | Shaken vodka, plum-forward |
+| cocktail5 | Dave's Folly | Barkeeper Bjorn (AI) | Shaken rye with pear and habanero |
+| cocktail6 | The Crossover | Barkeeper Bjorn (AI) | Shaken mezcal with citrus and Cocchi |
 
 ---
 
@@ -118,31 +84,32 @@ Quick reference. Full recipes live in `recipes.md`.
 | Field | Value |
 |---|---|
 | **Cocktails since last profile review** | 0 |
-| **Last review date** | — |
+| **Last review date** | 2026-05-03 (initial profile, baseline) |
 | **Next review threshold** | 5 cocktails |
-
-The agent will pause for a check-in after the threshold is hit. To override, just say *"skip the review"* or *"let's do a profile check-in now"* at any time.
 
 ---
 
 ## Profile Evolution Log
 
-> *Append-only log of meaningful shifts in the user's profile. Helps the agent (and the user) see how preferences evolve.*
-
 | Date | Change | Reason |
 |---|---|---|
-| *(unset)* | | |
+| 2026-05-03 | Initial profile created. All 6 flavor axes set with High confidence based on documented inventory, six originals, and conversation history. Drinker archetypes assigned: Sophisticated, Curious/Studious, Bartender's bartender, Spirit-forward/Old-school. | Migration from legacy single-file architecture to new repo structure (Barkeeper Bjorn v1.0). |
 
 ---
 
 ## Guests and Frequent Drinking Companions
 
-> *Optional. If you regularly serve cocktails to specific people, the agent can track their preferences too — useful for entertaining and gift-cocktail design.*
+### Guest 1 — Dave
+- **Name:** Dave
+- **Relationship:** Friend
+- **Preferences:** Loves habanero-infused drinks. Tolerant of significant heat.
+- **Vetoes:** *(unset — to be confirmed)*
+- **Drinks documented for Dave:** [cocktail5] Dave's Folly (rye + crème de poire + habanero honey syrup) and the Naked Dave variant (mezcal version)
 
-### Guest 1
-- **Name:** *(unset)*
-- **Relationship:** *(spouse / friend / sibling / etc.)*
-- **Preferences:** *(brief notes — e.g., "loves habanero in cocktails, hates cilantro in drinks")*
+### Guest 2 — Stan (Glenn's youngest brother)
+- **Name:** Stan
+- **Relationship:** Brother
+- **Preferences:** Occasional drinker. No home bar yet. Profile not yet captured — Glenn is considering setting Stan up with his own Barkeeper Bjorn instance using the Minimalist track.
 - **Vetoes:** *(unset)*
 
 *(Add additional guests as needed.)*
@@ -153,4 +120,4 @@ The agent will pause for a check-in after the threshold is hit. To override, jus
 
 | Version | Date | Notes |
 |---|---|---|
-| 1.0 | 2026-05-01 | Initial profile template — split out from the legacy "Bar Owner" section in barkeeper.md. Includes 6 flavor axes, drinker archetypes, evolution log, guest tracking. |
+| 1.0 | 2026-05-03 | Initial profile for Glenn Strycker. Migrated from legacy bartender.md "Bar Owner" section. All 6 flavor axes calibrated High confidence based on documented patterns. Four drinker archetypes assigned. Two guests (Dave, Stan) noted. |
