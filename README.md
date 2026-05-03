@@ -1,5 +1,7 @@
 # Barkeeper Bjorn
 
+Your friendly neighborhood bartender assistant AI agent
+
 > *A configurable, model-agnostic AI bartender, mixologist, cocktail librarian, and gap analyst — designed to grow with you over time.*
 
 Barkeeper Bjorn is a set of markdown configuration files that turn any modern LLM (Claude, ChatGPT, Gemini, Grok, etc.) into a personalized home-bar assistant. The agent can:
