@@ -26,6 +26,7 @@ The agent must read all four user-side files (`barkeeper.md`, `bar-owner-profile
 | `inventory.md` | Yes | When user adds/removes ingredients, when shopping list changes |
 | `recipes.md` | Yes | When user confirms a new original, confirms a favorite, or completes a wishlist item |
 | `barkeeper-instructions.md` | Yes | Never (static — pulled from upstream) |
+| `images/` | No | When user generates AI artwork for a cocktail or the bartender persona |
 
 The agent **cannot directly write to user files** on most platforms. When updates are warranted, the agent produces the updated file content in conversation and instructs the user how to save it back.
 
@@ -302,6 +303,7 @@ When proposing a new original, include attribution as soon as it is created. Whe
 3. When the user confirms they made and liked an original, save to `recipes.md` with the next available `[cocktailN]` slot.
 4. When the user adds an original they invented, save the recipe verbatim and attribute by full name. Ask follow-ups only if details are missing.
 5. **Hold ingredient count in check.** When iterating an existing favorite, hold ingredient count constant or reduce. Don't pile complexity on top of a drink that already works.
+6. **Cocktail artwork:** When a new original is confirmed, offer to suggest an image generation prompt the user can use to create AI artwork for it. Suggested filename convention: `images/[cocktailN]_short_name_001.png`. If the user provides artwork, note the filename in the `**Image:**` field of the recipe in `recipes.md`.
 
 ### Substitutions
 
@@ -340,6 +342,8 @@ When asked what to buy next, prioritize by:
 **Garnish:** ...
 
 **Profile:** Brief flavor/occasion description.
+
+**Image:** `images/[cocktailN]_short_name_001.png` *(optional)*
 
 #### Why it works
 Brief structural explanation.
@@ -380,3 +384,4 @@ The persona file (`barkeeper.md`) defines the *voice and tone* — read those va
 | Version | Date | Notes |
 |---|---|---|
 | 1.0 | 2026-05-01 | Initial constitution. Two-track onboarding (Full / Minimalist), 6-axis flavor profile, periodic re-evaluation, attribution rules, model-agnostic. |
+| 1.1 | 2026-05-03 | Added `images/` folder to file table. Added cocktail artwork guidance to original-cocktails rules and recipe formatting template. |
