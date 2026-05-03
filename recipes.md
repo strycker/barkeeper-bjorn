@@ -25,8 +25,6 @@
 
 **Profile:** Spirit-forward, stirred, brooding whisky cocktail. Cool weather, contemplative. A "thinking person's Manhattan riff."
 
-**Image:** `images/[cocktailN]_drink_name_001.png` *(optional — AI-generated art for this cocktail)*
-
 #### Why it works
 Rye spice meets amaretto's almond sweetness — savory fighting sweet. Cardamom syrup bridges them with warmth rather than just sugar. Turkish Tobacco bitters anchor with deep, leathery, slightly sweet smoke. Black walnut adds earthy underpinning. Orange bitters lift the nose so it doesn't get too brooding.
 
@@ -164,6 +162,54 @@ Swap the 0.5 oz Cocchi for 0.5 oz **Aperol** — slightly sweeter, more sunset-o
 
 ---
 
+### [cocktail7] Smokey the Pear
+*Pear-forward shaken cocktail with a Mexican-desert lean. Iterative — current spec is v2 after a too-smoky/too-sweet v1.*
+*Created by Glenn Strycker*
+
+| Ingredient | Amount |
+|---|---|
+| Mezcal | 1–1.25 oz |
+| Second base spirit (white Jamaican rum, gin, or vodka) | 1–1.25 oz |
+| Pear juice (Whole Foods carries good options) | 2–2.5 oz |
+| Crème de Poire | 0.75 oz |
+| Cocchi | 0.5 oz |
+| Prickly pear preserves | 1/2 tsp |
+| Rhubarb bitters | 3 dashes |
+| Angostura | 1 dash |
+| Black walnut bitters | 1 dash |
+
+**Method:** Shake hard with ice. Strain into a chilled martini glass.
+
+**Garnish:** Pear slice + cocktail cherry.
+
+**Profile:** Smoky-meets-pear shaken cocktail. Desert/Mexican thematic — the prickly pear preserves are the structural pun (a "pear" that isn't a pear, growing in mezcal country). Recommended sub-spirit pairing: **white Jamaican rum first choice** (funky/vegetal echoes agave's roasted notes; Jamaican esters complement pear esters), **gin second** (London Dry > floral — botanicals can complement pear, but heavy florals will fight it), **vodka third** (subtracts smoke without adding character).
+
+#### Why it works (v2)
+The v1 build (1.5 oz mezcal as sole base) put smoke in a fight it couldn't lose — and with three pear sweetness sources stacking (Crème de Poire, pear juice, preserves), the drink swung from too-smoky to too-sweet when diluted. The v2 split-base approach lets the second spirit *carry* the pear rather than asking pear to compete with smoke. Mezcal becomes a flavor accent at ~50% of base rather than the whole structure.
+
+The bitters trio is doing real work: rhubarb echoes mezcal's vegetal underbelly, Angostura provides classic baking-spice anchoring, black walnut adds earthy depth that bridges the desert-fruit theme.
+
+#### v1 (deprecated — for reference only)
+Original build was 1.5 oz mezcal as sole base, 1.5 oz pear juice, same other ingredients. Tasted too smoky; diluting with extra pear juice fixed the smoke but made it too sweet and not boozy enough. Lesson: split-base mezcal cocktails generally work better than mezcal-only when pear is the lead flavor — pear's softness gets buried under solo mezcal.
+
+#### Variation 1: Sweeter & mellower (1:1:1:1)
+*Best for guests who want the smoke way back.*
+
+Replace the structure with equal pours: **1 oz mezcal + 1 oz Carpano Antica + 1 oz pear juice + 1 oz Crème de Poire**, plus Cocchi as written. (Note: swap Cocchi for Carpano if avoiding two vermouths; or keep both at smaller pours to avoid double-vermouth heaviness.) Optional addition of a small amount of Cointreau is possible but be conservative — orange will overpower pear at anything more than 0.25 oz. Pear jam can substitute for prickly pear preserves to lean further into pure pear.
+
+#### Variation 2: 2x smokier
+Add **0.5 oz peaty Scotch** as a float on top of the v2 build. Look at it from a layering standpoint — Scotch hits the nose first, then mezcal smoke comes through mid-palate.
+
+#### Variation 3: 3x smokier
+Combine Variation 2 (peaty Scotch float) with a **substitution: cherry smoked bitters in place of (or alongside) the rhubarb bitters**. This pushes the drink fully into smoke-forward territory. Best for cool-weather drinking.
+
+#### Future variations to test
+- **Toasted pecan or walnut garnish** — would amplify the desert/Mexican theme
+- **Smoked salt rim** — half-rim, optional, ties directly into the smoke layering
+- **Aged rum sub** in place of white Jamaican — would add caramelization that could either complement or compete with the prickly pear preserves
+
+---
+
 ## Originals — Profile Coverage Matrix
 
 | ID | Name | Creator | Base | Method | Profile/Occasion |
@@ -174,6 +220,7 @@ Swap the 0.5 oz Cocchi for 0.5 oz **Aperol** — slightly sweeter, more sunset-o
 | cocktail4 | Plum Awesome | Glenn Strycker | Vodka | Shaken | Plum-forward, layered fruit |
 | cocktail5 | Dave's Folly | Barkeeper Bjorn (AI, Claude Opus 4.7) | Rye | Shaken | Heat-driven, pear+habanero |
 | cocktail6 | The Crossover | Barkeeper Bjorn (AI, Claude Opus 4.7) | Mezcal | Shaken | Citrus + smoke |
+| cocktail7 | Smokey the Pear | Glenn Strycker | Mezcal + split base | Shaken | Smoky pear, desert-themed |
 
 ---
 
@@ -215,3 +262,4 @@ Swap the 0.5 oz Cocchi for 0.5 oz **Aperol** — slightly sweeter, more sunset-o
 | Version | Date | Notes |
 |---|---|---|
 | 1.0 | 2026-05-03 | Migrated to new repo architecture. All six originals re-attributed using canonical format. AI cocktails now credited as "Created by Barkeeper Bjorn (Bartender AI Agent using Claude Opus 4.7)". Wishlist updated to reflect orgeat now in stock — Mai Tai, Japanese Cocktail, Army & Navy, Trinidad Sour all newly buildable. |
+| 1.1 | 2026-05-03 | Added [cocktail7] Smokey the Pear (Glenn Strycker original). Iterative cocktail — v1 was too smoky/sweet, current build is v2 with split-base approach (mezcal + neutral spirit). Three documented variations (mellower, 2x smokier, 3x smokier) plus future variation candidates. |
