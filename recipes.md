@@ -25,6 +25,8 @@
 
 **Profile:** Spirit-forward, stirred, brooding whisky cocktail. Cool weather, contemplative. A "thinking person's Manhattan riff."
 
+**Image:** `images/[cocktailN]_drink_name_001.png` *(optional — AI-generated art for this cocktail)*
+
 #### Why it works
 Rye spice meets amaretto's almond sweetness — savory fighting sweet. Cardamom syrup bridges them with warmth rather than just sugar. Turkish Tobacco bitters anchor with deep, leathery, slightly sweet smoke. Black walnut adds earthy underpinning. Orange bitters lift the nose so it doesn't get too brooding.
 

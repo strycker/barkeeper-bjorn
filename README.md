@@ -2,7 +2,7 @@
 
 Your friendly neighborhood bartender assistant AI agent
 
-<img src="barkeeper_bjorn_001.png" width="200">
+<img src="images/barkeeper_bjorn_001.png" width="200">
 
 > *A configurable, model-agnostic AI bartender, mixologist, cocktail librarian, and gap analyst — designed to grow with you over time.*
 
@@ -53,7 +53,8 @@ barkeeper-bjorn/
 ├── barkeeper-instructions.md    # Behavioral rules and onboarding script
 ├── bar-owner-profile.md         # YOUR profile — flavor axes, descriptors, history
 ├── inventory.md                 # YOUR bar — stocked, past, vetoes, shopping list
-└── recipes.md                   # YOUR cocktails — originals, favorites, wishlist
+├── recipes.md                   # YOUR cocktails — originals, favorites, wishlist
+└── images/                      # AI-generated cocktail artwork and bartender images
 ```
 
 **Configurable files** (you edit these): `barkeeper.md`, `bar-owner-profile.md`, `inventory.md`, `recipes.md`
