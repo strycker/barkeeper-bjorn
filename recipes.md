@@ -184,6 +184,8 @@ Swap the 0.5 oz Cocchi for 0.5 oz **Aperol** — slightly sweeter, more sunset-o
 
 **Profile:** Smoky-meets-pear shaken cocktail. Desert/Mexican thematic — the prickly pear preserves are the structural pun (a "pear" that isn't a pear, growing in mezcal country). Recommended sub-spirit pairing: **white Jamaican rum first choice** (funky/vegetal echoes agave's roasted notes; Jamaican esters complement pear esters), **gin second** (London Dry > floral — botanicals can complement pear, but heavy florals will fight it), **vodka third** (subtracts smoke without adding character).
 
+**Image:** `images/smokey_the_pear_001.png`, `images/smokey_the_pear_002.png`
+
 #### Why it works (v2)
 The v1 build (1.5 oz mezcal as sole base) put smoke in a fight it couldn't lose — and with three pear sweetness sources stacking (Crème de Poire, pear juice, preserves), the drink swung from too-smoky to too-sweet when diluted. The v2 split-base approach lets the second spirit *carry* the pear rather than asking pear to compete with smoke. Mezcal becomes a flavor accent at ~50% of base rather than the whole structure.
 
