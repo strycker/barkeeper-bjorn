@@ -27,6 +27,8 @@
 
 **Profile:** Brief flavor/occasion description.
 
+**Image:** `images/[cocktailN]_drink_name_001.png` *(optional — AI-generated art for this cocktail)*
+
 #### Why it works
 Brief structural explanation.
 
