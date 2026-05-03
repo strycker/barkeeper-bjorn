@@ -59,24 +59,76 @@ Also update `INSTALL.md` platform notes (ChatGPT Custom GPT, Gemini Gem, Grok) t
 
 ---
 
+### 1.5 — Session-start menu for returning users
+
+**Problem:** When a returning user starts a session (files already populated), the agent has no consistent entry point. ChatGPT defaulted to a verbose "Option A / B / C" menu that felt more like a product pitch than a bartender greeting. The correct behavior is a warm, focused menu that respects the user's time and leads directly into action.
+
+**Behavior spec:**
+
+On session start with populated files, the agent greets the user by name and presents a short numbered menu. The persona name in the greeting comes from `barkeeper.md` (default: Barkeeper Bjorn, but user may have renamed).
+
+Example:
+
+> *"Hey Glenn — Barkeeper Bjorn here. What are we doing tonight?"*
+>
+> 1. Make me a drink from what I have
+> 2. Design a new original
+> 3. See my current recipe list
+> 4. What should I buy next? (gap analysis)
+> 5. Update my inventory
+> 6. Review my flavor profile
+> 7. Chat about something else
+
+Rules:
+- Always exactly one greeting line, then the numbered menu. No preamble, no story, no product pitch.
+- **"Chat about something else"** is always the last option.
+- If the user skips the menu and just says something ("make me something smoky"), honor it directly — the menu is a convenience, not a gate.
+- The menu items can expand slightly over time (e.g., "See drink history" once history tracking exists), but keep it to 7–9 items maximum.
+
+**Option 3 — "See my current recipe list" behavior:**
+
+- **Fewer than 10 originals:** Display all of them immediately in a compact card format — name, creator, base spirit, method, and one-line occasion/profile. No need to ask which ones.
+- **10 or more originals:** Display names only in a numbered list. User selects one or more by number to read in full. Selected recipes are shown with full detail: ingredients table, method, garnish, profile, image if present.
+
+Compact card format (for < 10):
+```
+**[cocktailN] Drink Name** — Created by [attribution]
+Base: [spirit] | Method: [shaken/stirred/built] | Occasion: [one phrase]
+```
+
+**Files:** `barkeeper-instructions.md`
+
+---
+
 ## Tier 2 — Structural Improvements (moderate effort)
 
 These require new files or meaningful refactoring of existing ones. No new tech stack.
 
-### 2.1 — JSON schema normalization
+### 2.1 — JSON schema normalization (with bidirectional MD sync)
 
-**Problem:** The current `.md` files are human-readable and LLM-parseable, but not machine-readable. A future API, recommender, or UI would need structured data.
+**Problem:** The current `.md` files are human-readable and LLM-parseable, but not machine-readable. A future API, recommender, or UI would need structured data. However, the `.md` files must remain fully usable for humans — users will continue to edit them by hand.
 
-**Plan:**
-- Define JSON schemas for the four core data files:
-  - `schema/inventory.schema.json`
-  - `schema/recipes.schema.json`
-  - `schema/bar-owner-profile.schema.json`
-  - `schema/barkeeper.schema.json`
-- The `.md` files remain canonical for LLM consumption; the JSON files serve as the source of truth for any programmatic layer.
-- Add an agent instruction: "When producing updated file content, also output a JSON representation matching the schema."
+**Data architecture:**
+- **JSON is the system of record.** All writes from the app, API, and agent go to JSON first.
+- **MD files are derived from JSON.** They are regenerated whenever JSON changes — either by the agent, by a sync script, or by the future web UI. They are the human-readable view of the canonical data.
+- **Bidirectional sync:** If a user edits an `.md` file by hand (the expected workflow for most users), Bjorn detects the change at the next session start, reconciles the diff against the JSON, and updates the JSON to match. The agent narrates this: *"I noticed you updated `inventory.md` since last time — I've synced those changes into the structured data."*
+- No pure-JSON workflow is imposed on users. The `.md` files remain first-class and fully editable.
 
-**Files:** New `schema/` directory
+**Schema files to define:**
+- `schema/inventory.schema.json`
+- `schema/recipes.schema.json`
+- `schema/bar-owner-profile.schema.json`
+- `schema/barkeeper.schema.json`
+
+**Data files (generated, not hand-edited):**
+- `data/inventory.json`
+- `data/recipes.json`
+- `data/bar-owner-profile.json`
+- `data/barkeeper.json`
+
+**Agent instruction addition:** "At session start, if JSON data files exist, check whether the corresponding `.md` files have been modified since the last sync. If yes, parse the changes and offer to update the JSON. If JSON files don't exist yet, offer to generate them from the current `.md` files."
+
+**Files:** New `schema/` and `data/` directories; `barkeeper-instructions.md` updates
 
 ---
 
@@ -233,3 +285,4 @@ Things worth capturing but not yet scoped.
 | Version | Date | Notes |
 |---|---|---|
 | 0.1 | 2026-05-03 | Initial roadmap. Captures quick fixes (Tier 1), structural improvements (Tier 2), and product/platform ambitions (Tiers 3–4) based on first real-world install feedback from ChatGPT. |
+| 0.2 | 2026-05-03 | Added 1.5 (session-start menu with smart recipe list display). Revised 2.1 to clarify JSON↔MD architecture: JSON is system-of-record, MD files are derived and human-editable, bidirectional sync handled by agent at session start. |
