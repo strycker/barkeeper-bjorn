@@ -50,16 +50,40 @@ barkeeper-bjorn/
 ├── INIT_PROMPT.md               # Literal text to start a session
 ├── LICENSE                      # MIT
 ├── barkeeper.md                 # Agent persona — name, voice, foundation model
-├── barkeeper-instructions.md    # Behavioral rules and onboarding script
+├── barkeeper-instructions.md    # Behavioral rules and onboarding script (v2.0, modular)
 ├── bar-owner-profile.md         # YOUR profile — flavor axes, descriptors, history
 ├── inventory.md                 # YOUR bar — stocked, past, vetoes, shopping list
 ├── recipes.md                   # YOUR cocktails — originals, favorites, wishlist
-└── images/                      # AI-generated cocktail artwork and bartender images
+├── session-state.md             # In-session scratchpad — ingredients used, feedback, deltas
+├── to-do.md                     # Project roadmap
+├── images/                      # AI-generated cocktail artwork and bartender images
+├── instructions/                # Modular instruction files (for multi-file platforms)
+│   ├── core.md                  # Role, mandate, file table, JSON↔MD sync
+│   ├── onboarding.md            # Session detection, persona selection, full & minimalist tracks
+│   ├── behavioral-rules.md      # Inventory, vetoes, attribution, originals, recipe template
+│   ├── re-evaluation.md         # Periodic check-in and session-state tracking
+│   ├── analytics.md             # Analytics mode — gap analysis, ROI, flavor-space mapping
+│   ├── communication.md         # Voice, formatting, persona application
+│   └── safety.md                # Mental health guardrails, responsible service
+├── schema/                      # JSON Schema definitions for all data files
+│   ├── barkeeper.schema.json
+│   ├── bar-owner-profile.schema.json
+│   ├── inventory.schema.json
+│   └── recipes.schema.json
+└── data/                        # Structured JSON derived from MD files (system of record)
+    ├── barkeeper.json
+    ├── bar-owner-profile.json
+    ├── inventory.json
+    └── recipes.json
 ```
 
-**Configurable files** (you edit these): `barkeeper.md`, `bar-owner-profile.md`, `inventory.md`, `recipes.md`
+**Your files** (edit these directly): `barkeeper.md`, `bar-owner-profile.md`, `inventory.md`, `recipes.md`
 
-**Constitution file** (mostly static): `barkeeper-instructions.md` — pull updates from upstream as the project evolves
+**Constitution file** (mostly static): `barkeeper-instructions.md` — pull updates from upstream as the project evolves. On platforms that support multiple knowledge files (Claude Projects), you may load the `instructions/` modules individually instead.
+
+**Structured data** (`data/`): JSON files derived from the MD files. JSON is the system of record; the agent syncs changes bidirectionally. Edit the MD files — the agent reconciles.
+
+**Schema** (`schema/`): JSON Schema definitions for validation and future API/UI use.
 
 ---
 
