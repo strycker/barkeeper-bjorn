@@ -28,6 +28,45 @@
 
 ---
 
+## Equipment
+
+*Bar tools on hand. The agent uses this to scope execution complexity — don't suggest techniques that require tools the user doesn't have.*
+
+| Tool | Status | Notes |
+|---|---|---|
+| **Shaker** | *(unset)* | Boston two-piece / cobbler / none |
+| **Mixing glass** | *(unset)* | |
+| **Jigger** | *(unset)* | |
+| **Bar spoon** | *(unset)* | |
+| **Strainer** | *(unset)* | Hawthorne / Julep / fine mesh / none |
+| **Citrus press** | *(unset)* | |
+| **Ice setup** | *(unset)* | Standard cubes / large format / crushed / combination |
+| **Other** | *(unset)* | Muddler, channel knife, smoker, etc. |
+
+**Gaps flagged:** *(any missing tools worth upgrading)*
+
+---
+
+## Constraints
+
+*Practical limits the agent should factor into all recommendations.*
+
+| Field | Value |
+|---|---|
+| **Bar budget** | *(unset — e.g., "selective, $50–75 per bottle max," "open," "tight right now")* |
+| **Space** | *(unset — e.g., "dedicated bar cart," "one cabinet shelf," "full bar setup")* |
+| **Cocktail frequency** | *(unset — e.g., "a few times a year," "weekly," "most evenings")* |
+
+---
+
+## Personal Context
+
+*Interests and lifestyle signals that inform drink design and recommendation style. Optional — only populated if the user engages.*
+
+- *(unset — examples: "cooks seriously, ingredient-first thinking"; "well-traveled, interested in Japanese and Mexican traditions"; "data/systems background, responds well to structural explanations"; "cares about presentation and visual design")*
+
+---
+
 ## Flavor Profile — The 6 Axes
 
 The agent calibrates suggestions against these six axes. Confidence reflects how well-established each position is — early in the relationship, most will be Tentative. After enough cocktails together, most should be High.
@@ -42,6 +81,16 @@ The agent calibrates suggestions against these six axes. Confidence reflects how
 | 6 | Risk tolerance (classics-only ⟷ surprise me) | *(unset)* | — | — |
 
 > **How to read positions:** Use language like "Strong A," "Lean A," "Middle," "Lean B," "Strong B," or describe nuance ("Lean A, but enjoys spirit-forward when the weather turns cold").
+
+### Supplemental Calibration
+
+*Dimensions not covered by the 6 axes. Captured during onboarding and updated as patterns emerge.*
+
+| Dimension | Position | Notes |
+|---|---|---|
+| **Smoke** (mezcal, peated Scotch) | *(unset — into it / neutral / avoids)* | |
+| **Funk** (high-ester rum, overripe/fermented notes) | *(unset — into it / neutral / turnoff)* | |
+| **Savory / saline** (olive brine, miso, sea salt in drinks) | *(unset — interesting / neutral / hard no)* | |
 
 ---
 
@@ -154,3 +203,4 @@ The agent will pause for a check-in after the threshold is hit. To override, jus
 | Version | Date | Notes |
 |---|---|---|
 | 1.0 | 2026-05-01 | Initial profile template — split out from the legacy "Bar Owner" section in barkeeper.md. Includes 6 flavor axes, drinker archetypes, evolution log, guest tracking. |
+| 1.1 | 2026-05-03 | Added Equipment section (tools + ice setup + gaps). Added Constraints section (budget, space, frequency). Added Personal Context section (interests and lifestyle signals). Added Supplemental Calibration table to Flavor Profile (smoke, funk, savory/saline). |

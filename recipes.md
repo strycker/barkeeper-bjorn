@@ -27,7 +27,7 @@
 
 **Profile:** Brief flavor/occasion description.
 
-**Image:** `images/[cocktailN]_drink_name_001.png` *(optional — AI-generated art for this cocktail)*
+**Image:** <img src="https://raw.githubusercontent.com/USERNAME/barkeeper-bjorn/refs/heads/BRANCH/images/[cocktailN]_short_name_001.png" width="200"> *(optional — replace USERNAME and BRANCH; add multiple img tags for alternates)*
 
 #### Why it works
 Brief structural explanation.
