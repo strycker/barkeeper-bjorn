@@ -100,11 +100,11 @@ Base: [spirit] | Method: [shaken/stirred/built] | Occasion: [one phrase]
 
 ---
 
-## Tier 2 — Structural Improvements ✓ Complete
+## Tier 2 — Structural Improvements (moderate effort)
 
-These required new files or meaningful refactoring of existing ones. No new tech stack.
+These require new files or meaningful refactoring of existing ones. No new tech stack.
 
-### 2.1 — JSON schema normalization (with bidirectional MD sync) ✓
+### 2.1 — JSON schema normalization (with bidirectional MD sync)
 
 **Problem:** The current `.md` files are human-readable and LLM-parseable, but not machine-readable. A future API, recommender, or UI would need structured data. However, the `.md` files must remain fully usable for humans — users will continue to edit them by hand.
 
@@ -132,7 +132,7 @@ These required new files or meaningful refactoring of existing ones. No new tech
 
 ---
 
-### 2.2 — Modular prompt architecture ✓
+### 2.2 — Modular prompt architecture
 
 **Problem:** `barkeeper-instructions.md` is a monolithic 20KB file. As features grow, it becomes harder to maintain, harder to update selectively, and harder to diff.
 
@@ -150,7 +150,7 @@ A top-level `barkeeper-instructions.md` would `include` or concatenate these —
 
 ---
 
-### 2.3 — State management design (inventory depletion + preferences learning) ✓
+### 2.3 — State management design (inventory depletion + preferences learning)
 
 **Problem:** The agent has no concept of time within a session. It doesn't track that you used 2 oz of cognac tonight, doesn't decrement bottle levels, and doesn't record preference signals from in-session feedback.
 
@@ -167,7 +167,7 @@ A top-level `barkeeper-instructions.md` would `include` or concatenate these —
 
 ---
 
-### 2.4 — Analytics intelligence layer ✓
+### 2.4 — Analytics intelligence layer
 
 **Problem:** Glenn has a PhD in physics and runs a Decision Sciences team. The current agent is a knowledgeable bartender, not a recommendation engine. There's a gap.
 
@@ -286,4 +286,3 @@ Things worth capturing but not yet scoped.
 |---|---|---|
 | 0.1 | 2026-05-03 | Initial roadmap. Captures quick fixes (Tier 1), structural improvements (Tier 2), and product/platform ambitions (Tiers 3–4) based on first real-world install feedback from ChatGPT. |
 | 0.2 | 2026-05-03 | Added 1.5 (session-start menu with smart recipe list display). Revised 2.1 to clarify JSON↔MD architecture: JSON is system-of-record, MD files are derived and human-editable, bidirectional sync handled by agent at session start. |
-| 0.3 | 2026-05-03 | Tier 2 complete: 2.1 (JSON schemas in schema/, data/ placeholders, bidirectional sync instruction); 2.2 (instructions/ module split — 7 modules); 2.3 (session-state.md template, re-evaluation module updated); 2.4 (analytics.md module, analytics mode in main instructions, Option 7 in session-start menu). barkeeper-instructions.md bumped to v2.0. README file structure updated. |
